@@ -35,15 +35,15 @@ int get_msb(int x) {
 # Bit-Level Floating-Point Coding Rules
 
 In the following problems, you will write code to implement floating-point functions, operating directly on bit-level representations of floating-point numbers. Your code should exactly replicate the conventions for IEEE floating-point operations, including using round-to-even mode when rounding is required.
-    To this end, we define data type float_bits to be equivalent to unsigned:
+To this end, we define data type float_bits to be equivalent to unsigned:
 
 ```c
 /* Access bit-level representation floating-point number */
 typedef unsigned float_bits;
 ```
 
-    Rather than using data type float in your code, you will use float_bits. You may use both int and unsigned data types, including unsigned and integer constants and operations. You may not use any unions, structs, or arrays. Most significantly, you may not use any floating-point data types, operations, or constants. Instead, your code should perform the bit manipulations that implement the specified floating-point operations.
-    The following function illustrates the use of these coding rules. For argument f, it returns +-0 if f is denormalized (perserving the sign of f), and returns f otherwise.
+Rather than using data type float in your code, you will use float_bits. You may use both int and unsigned data types, including unsigned and integer constants and operations. You may not use any unions, structs, or arrays. Most significantly, you may not use any floating-point data types, operations, or constants. Instead, your code should perform the bit manipulations that implement the specified floating-point operations.
+The following function illustrates the use of these coding rules. For argument f, it returns +-0 if f is denormalized (perserving the sign of f), and returns f otherwise.
 
 ```c
 /* If f is denorm, return 0.  Otherwise, return f */
