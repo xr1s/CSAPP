@@ -2,10 +2,10 @@
 # The following code computes the 128-bit product of two 64-bit signed value x
 # and y and stores the result in memory.
 #
-# typedef __int128 int128_t#
+# typedef __int128 int128_t;
 #
 # void store_prod(int128_t *dest, int64_t x, int64_t y) {
-#     *dest = x * (int128_t) y#
+#     *dest = x * (int128_t) y;
 # }
 #
 # GCC generates the following assembly code implementing the computation:
